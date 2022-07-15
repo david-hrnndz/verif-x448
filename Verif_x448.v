@@ -134,8 +134,6 @@ Proof.
     destruct H15.
     induction i; simpl; try auto.
 
-    unfold Znth. simpl. 
-
     
     
     unfold nth; try auto; simpl.   
