@@ -44,36 +44,22 @@ Fixpoint list_scalar_mult (n : Z) (l : list Z) :=
 
 Compute list_scalar_mult 3 [1 ; 2 ; 3].
 
+Compute Z.pow 2 3.
+
 Fixpoint list_to_int (l  : list Z) (n : Z) := 
     match l with 
     | nil => 0
-    | h :: t => h * (2^(32 * n)) + (list_to_int t n+1)
+    | h :: t => (h * (Z.pow 2 (32 * (n)))) + (list_to_int t (n+1))
     end. 
 
-(* Definition list_to_int (l : list Z) := 
-    (N/(2^(32*15))) mod 2^32. 
-    (N/(2^(32*14))) mod 2^32 +
-    (N/(2^(32*13))) mod 2^32 +
-    (N/(2^(32*12))) mod 2^32 +
-    (N/(2^(32*11))) mod 2^32 +
-    (N/(2^(32*10))) mod 2^32 +
-    (N/(2^(32*9))) mod 2^32 +
-    (N/(2^(32*8))) mod 2^32 +
-    (N/(2^(32*7))) mod 2^32 +
-    (N/(2^(32*6))) mod 2^32 +
-    (N/(2^(32*5))) mod 2^32 +
-    (N/(2^(32*4))) mod 2^32 +
-    (N/(2^(32*3))) mod 2^32 +
-    (N/(2^(32*2))) mod 2^32 +
-    (N/(2^32)) mod 2^32 +
-    (N/(2^0)) mod 2^32;
-    *)
-
-
-
+(* Compute split_to_list . *)
+Compute (33 + 1*(2^32)+1*(2^(32*2)) + 1*(2^(32*3)) + 1*(2^(32*15))) -
+    ( list_to_int [33; 1; 1; 1; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 1] 0).
 
 Compute split_to_list 20461022933861958966015542640853531714416036282372.
+
 Compute list_to_int [4; 17; 29; 35; 33; 14; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0] 0. 
+
 
 
 Definition gf_cpy_spec : ident * funspec :=
