@@ -33,7 +33,7 @@ Definition split_to_list (N : Z) : list Z :=
         (N/(2^(32*15))) mod 2^32
     ].
 
-(* Some listrep functions to represent out lists. *)
+(* Some listrep functions to represent our lists. *)
 Definition listrepVal (s : share) (x : val) (contents : list val) : mpred :=
     EX x0 : list val, EX limb : val,
     data_at s t_gf x0 x  *  
@@ -76,12 +76,14 @@ WITH
                 Zlength contents_x = 16;
                 Zlength contents_y = 16)
         PARAMS (x ; y) GLOBALS (gv)
-        SEP    (listrepVal shx x contents_x; listrepZ shy y contents_y)
+        SEP    (field_at shx t_gf contents_x; listrepZ shy y contents_y)
     POST [ tvoid ]
         PROP   ()
         RETURN ()
         SEP    (listrepZ shx x contents_y; listrepZ shy y contents_y).
-Definition gf_cpy_INV shx shy x y contents_x contents_y := (* The invariant for the loop *)
+
+(* Define the invariant for the loop. *)
+Definition gf_cpy_INV shx shy x y contents_x contents_y := 
     EX i : Z,
         PROP  (writable_share shx;
                readable_share shy;
@@ -92,7 +94,9 @@ Definition gf_cpy_INV shx shy x y contents_x contents_y := (* The invariant for 
         SEP   (listrepVal shx x ((list.take (Z.to_nat i) (map Vint (map Int.repr contents_y)))
                 ++ list.drop (Z.to_nat i) contents_x);
                listrepZ shy y contents_y).
+
 Definition Gprog : funspecs := [ gf_cpy_spec ].
+
 Lemma body_gf_cpy : semax_body Vprog Gprog f_gf_cpy gf_cpy_spec.
 Proof.
     start_function.
