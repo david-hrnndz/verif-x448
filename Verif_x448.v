@@ -3,12 +3,11 @@ Require Import x448.
 Require Import stdpp.list.
 Require Import ZArith.
 Require Import Coq.Program.Equality.
+
 Instance CompSpecs : compspecs. Proof. make_compspecs prog. Defined.
 Definition Vprog : varspecs.  mk_varspecs prog. Defined.
 
 Definition t_gf := Tstruct __257 noattr.
-
-(* Un comentario *)
 
 (** We will define a separation-logic predicate, [listrep N p],
  to describe the concept that the address [p] in memory is a
@@ -16,6 +15,8 @@ Definition t_gf := Tstruct __257 noattr.
 
 Local Open Scope Z.
 
+
+(* Function to split a [large] integer into a list representation of size number of limbs (16 in this case). *)
 Definition split_to_list (N : Z) : list Z := 
     [    N mod 2^32;
         (N/(2^32)) mod 2^32;
@@ -35,7 +36,45 @@ Definition split_to_list (N : Z) : list Z :=
         (N/(2^(32*15))) mod 2^32
     ].
 
+Fixpoint list_scalar_mult (n : Z) (l : list Z) := 
+    match l with 
+    | nil => nil
+    | h :: t => (n * h) :: list_scalar_mult n t
+    end.
+
+Compute list_scalar_mult 3 [1 ; 2 ; 3].
+
+Fixpoint list_to_int (l  : list Z) (n : Z) := 
+    match l with 
+    | nil => 0
+    | h :: t => h * (2^(32 * n)) + (list_to_int t n+1)
+    end. 
+
+(* Definition list_to_int (l : list Z) := 
+    (N/(2^(32*15))) mod 2^32. 
+    (N/(2^(32*14))) mod 2^32 +
+    (N/(2^(32*13))) mod 2^32 +
+    (N/(2^(32*12))) mod 2^32 +
+    (N/(2^(32*11))) mod 2^32 +
+    (N/(2^(32*10))) mod 2^32 +
+    (N/(2^(32*9))) mod 2^32 +
+    (N/(2^(32*8))) mod 2^32 +
+    (N/(2^(32*7))) mod 2^32 +
+    (N/(2^(32*6))) mod 2^32 +
+    (N/(2^(32*5))) mod 2^32 +
+    (N/(2^(32*4))) mod 2^32 +
+    (N/(2^(32*3))) mod 2^32 +
+    (N/(2^(32*2))) mod 2^32 +
+    (N/(2^32)) mod 2^32 +
+    (N/(2^0)) mod 2^32;
+    *)
+
+
+
+
 Compute split_to_list 20461022933861958966015542640853531714416036282372.
+Compute list_to_int [4; 17; 29; 35; 33; 14; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0] 0. 
+
 
 Definition gf_cpy_spec : ident * funspec :=
     DECLARE _gf_cpy
