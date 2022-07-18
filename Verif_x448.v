@@ -8,6 +8,8 @@ Definition Vprog : varspecs.  mk_varspecs prog. Defined.
 
 Definition t_gf := Tstruct __257 noattr.
 
+(* Un comentario *)
+
 (** We will define a separation-logic predicate, [listrep N p],
  to describe the concept that the address [p] in memory is a
  list that represents the number N \in GF(prime) in 16 limbs. *)
