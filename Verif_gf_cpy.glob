@@ -1,0 +1,241 @@
+DIGEST 696aa3a5dc98e9cf4f253607c8b8ace8
+FVerif_gf_cpy
+R15:33 VST.floyd.proofauto <> <> lib
+R51:54 x448 <> <> lib
+R72:81 stdpp.list <> <> lib
+R99:104 Coq.ZArith.ZArith <> <> lib
+R122:140 compcert.lib.Coqlib <> <> lib
+inst 153:161 <> CompSpecs
+R165:173 VST.veric.mpred <> compspecs class
+R198:201 x448 <> prog def
+def 224:228 <> Vprog
+R232:239 VST.veric.mpred <> varspecs def
+R255:258 x448 <> prog def
+def 282:285 <> t_gf
+R290:296 compcert.cfrontend.Ctypes <> Tstruct constr
+R298:302 x448 <> __257 def
+R304:309 compcert.cfrontend.Ctypes <> noattr def
+def 537:547 <> gf_cpy_spec
+R556:558 Coq.Init.Datatypes <> ::type_scope:x_'*'_x not
+R551:555 compcert.common.AST <> ident def
+R559:565 VST.veric.mpred <> funspec ind
+R574:581 VST.floyd.client_lemmas <> :::'DECLARE'_x_x not
+R589:593 VST.floyd.client_lemmas <> :::'DECLARE'_x_x not
+R582:588 x448 <> _gf_cpy def
+R594:607 VST.floyd.client_lemmas <> ::funspec_scope:'WITH'_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_'PRE'_'['_x_','_'..'_','_x_']'_x_'POST'_'['_x_']'_x not
+R609:610 VST.floyd.client_lemmas <> ::funspec_scope:'WITH'_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_'PRE'_'['_x_','_'..'_','_x_']'_x_'POST'_'['_x_']'_x not
+R614:623 VST.floyd.client_lemmas <> ::funspec_scope:'WITH'_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_'PRE'_'['_x_','_'..'_','_x_']'_x_'POST'_'['_x_']'_x not
+R627:629 VST.floyd.client_lemmas <> ::funspec_scope:'WITH'_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_'PRE'_'['_x_','_'..'_','_x_']'_x_'POST'_'['_x_']'_x not
+R635:644 VST.floyd.client_lemmas <> ::funspec_scope:'WITH'_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_'PRE'_'['_x_','_'..'_','_x_']'_x_'POST'_'['_x_']'_x not
+R655:657 VST.floyd.client_lemmas <> ::funspec_scope:'WITH'_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_'PRE'_'['_x_','_'..'_','_x_']'_x_'POST'_'['_x_']'_x not
+R666:675 VST.floyd.client_lemmas <> ::funspec_scope:'WITH'_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_'PRE'_'['_x_','_'..'_','_x_']'_x_'POST'_'['_x_']'_x not
+R677:678 VST.floyd.client_lemmas <> ::funspec_scope:'WITH'_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_'PRE'_'['_x_','_'..'_','_x_']'_x_'POST'_'['_x_']'_x not
+R682:691 VST.floyd.client_lemmas <> ::funspec_scope:'WITH'_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_'PRE'_'['_x_','_'..'_','_x_']'_x_'POST'_'['_x_']'_x not
+R695:697 VST.floyd.client_lemmas <> ::funspec_scope:'WITH'_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_'PRE'_'['_x_','_'..'_','_x_']'_x_'POST'_'['_x_']'_x not
+R703:712 VST.floyd.client_lemmas <> ::funspec_scope:'WITH'_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_'PRE'_'['_x_','_'..'_','_x_']'_x_'POST'_'['_x_']'_x not
+R723:725 VST.floyd.client_lemmas <> ::funspec_scope:'WITH'_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_'PRE'_'['_x_','_'..'_','_x_']'_x_'POST'_'['_x_']'_x not
+R732:741 VST.floyd.client_lemmas <> ::funspec_scope:'WITH'_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_'PRE'_'['_x_','_'..'_','_x_']'_x_'POST'_'['_x_']'_x not
+R744:746 VST.floyd.client_lemmas <> ::funspec_scope:'WITH'_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_'PRE'_'['_x_','_'..'_','_x_']'_x_'POST'_'['_x_']'_x not
+R754:764 VST.floyd.client_lemmas <> ::funspec_scope:'WITH'_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_'PRE'_'['_x_','_'..'_','_x_']'_x_'POST'_'['_x_']'_x not
+R774:775 VST.floyd.client_lemmas <> ::funspec_scope:'WITH'_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_'PRE'_'['_x_','_'..'_','_x_']'_x_'POST'_'['_x_']'_x not
+R785:795 VST.floyd.client_lemmas <> ::funspec_scope:'WITH'_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_'PRE'_'['_x_','_'..'_','_x_']'_x_'POST'_'['_x_']'_x not
+R1123:1134 VST.floyd.client_lemmas <> ::funspec_scope:'WITH'_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_'PRE'_'['_x_','_'..'_','_x_']'_x_'POST'_'['_x_']'_x not
+R1140:1150 VST.floyd.client_lemmas <> ::funspec_scope:'WITH'_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_','_x_':'_x_'PRE'_'['_x_','_'..'_','_x_']'_x_'POST'_'['_x_']'_x not
+R765:768 compcert.exportclight.Clightdefs <> tptr def
+R770:773 Verif_gf_cpy <> t_gf def
+R776:779 compcert.exportclight.Clightdefs <> tptr def
+R781:784 Verif_gf_cpy <> t_gf def
+R1135:1139 compcert.exportclight.Clightdefs <> tvoid def
+R611:613 compcert.common.Values <> val ind
+R630:634 VST.msl.shares <> share def
+R658:661 Coq.Init.Datatypes <> list ind
+R663:665 compcert.common.Values <> val ind
+R679:681 compcert.common.Values <> val ind
+R698:702 VST.msl.shares <> share def
+R726:729 Coq.Init.Datatypes <> list ind
+R731:731 Coq.Numbers.BinNums <> Z ind
+R747:753 VST.veric.SeparationLogic <> globals def
+binder 608:608 <> x:1
+binder 624:626 <> shx:2
+binder 645:654 <> contents_x:3
+binder 676:676 <> y:4
+binder 692:694 <> shy:5
+binder 713:722 <> contents_y:6
+binder 742:743 <> gv:7
+R796:803 VST.floyd.canon <> ::assert:'PROP'_'('_x_';'_'..'_';'_x_')'_x not
+R822:839 VST.floyd.canon <> ::assert:'PROP'_'('_x_';'_'..'_';'_x_')'_x not
+R858:875 VST.floyd.canon <> ::assert:'PROP'_'('_x_';'_'..'_';'_x_')'_x not
+R899:916 VST.floyd.canon <> ::assert:'PROP'_'('_x_';'_'..'_';'_x_')'_x not
+R940:949 VST.floyd.canon <> ::assert:'PROP'_'('_x_';'_'..'_';'_x_')'_x not
+R804:817 VST.veric.shares <> writable_share def
+R819:821 Verif_gf_cpy <> shx:2 var
+R840:853 VST.veric.shares <> readable_share def
+R855:857 Verif_gf_cpy <> shy:5 var
+R894:896 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R876:882 Coq.ZArith.Zcomplements <> Zlength def
+R884:893 Verif_gf_cpy <> contents_x:3 var
+R935:937 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R917:923 Coq.ZArith.Zcomplements <> Zlength def
+R925:934 Verif_gf_cpy <> contents_y:6 var
+R950:957 VST.floyd.canon <> ::assert3:'PARAMS'_'('_x_';'_'..'_';'_x_')'_x not
+R959:961 VST.floyd.canon <> ::assert3:'PARAMS'_'('_x_';'_'..'_';'_x_')'_x not
+R963:964 VST.floyd.canon <> ::assert3:'PARAMS'_'('_x_';'_'..'_';'_x_')'_x not
+R958:958 Verif_gf_cpy <> x:1 var
+R962:962 Verif_gf_cpy <> y:4 var
+R965:973 VST.floyd.canon <> ::assert4:'GLOBALS'_'('_x_';'_'..'_';'_x_')'_x not
+R976:985 VST.floyd.canon <> ::assert4:'GLOBALS'_'('_x_';'_'..'_';'_x_')'_x not
+R974:975 Verif_gf_cpy <> gv:7 var
+R986:993 VST.floyd.canon <> ::assert5:'SEP'_'('_x_';'_'..'_';'_x_')' not
+R1036:1053 VST.floyd.canon <> ::assert5:'SEP'_'('_x_';'_'..'_';'_x_')' not
+R1122:1122 VST.floyd.canon <> ::assert5:'SEP'_'('_x_';'_'..'_';'_x_')' not
+R994:1001 VST.floyd.field_at <> field_at def
+R1003:1005 Verif_gf_cpy <> shx:2 var
+R1007:1010 Verif_gf_cpy <> t_gf def
+R1013:1016 VST.floyd.nested_field_lemmas <> ::gfield_scope:'DOT'_x not
+R1017:1021 x448 <> _limb def
+R1024:1033 Verif_gf_cpy <> contents_x:3 var
+R1035:1035 Verif_gf_cpy <> x:1 var
+R1054:1061 VST.floyd.field_at <> field_at def
+R1063:1065 Verif_gf_cpy <> shy:5 var
+R1067:1070 Verif_gf_cpy <> t_gf def
+R1073:1076 VST.floyd.nested_field_lemmas <> ::gfield_scope:'DOT'_x not
+R1077:1081 x448 <> _limb def
+R1085:1087 Coq.Lists.List <> map def
+R1095:1097 Coq.Lists.List <> map def
+R1108:1117 Verif_gf_cpy <> contents_y:6 var
+R1099:1106 compcert.lib.Integers Int repr def
+R1089:1092 compcert.common.Values <> Vint constr
+R1121:1121 Verif_gf_cpy <> y:4 var
+binder 608:608 <> x:8
+binder 624:626 <> shx:9
+binder 645:654 <> contents_x:10
+binder 676:676 <> y:11
+binder 692:694 <> shy:12
+binder 713:722 <> contents_y:13
+binder 742:743 <> gv:14
+R1151:1168 VST.floyd.canon <> ::assert:'PROP'_'()'_x not
+R1169:1186 VST.floyd.canon <> ::assert3:'RETURN'_'()'_x not
+R1187:1194 VST.floyd.canon <> ::assert5:'SEP'_'('_x_';'_'..'_';'_x_')' not
+R1263:1280 VST.floyd.canon <> ::assert5:'SEP'_'('_x_';'_'..'_';'_x_')' not
+R1349:1349 VST.floyd.canon <> ::assert5:'SEP'_'('_x_';'_'..'_';'_x_')' not
+R1195:1202 VST.floyd.field_at <> field_at def
+R1204:1206 Verif_gf_cpy <> shx:9 var
+R1208:1211 Verif_gf_cpy <> t_gf def
+R1214:1217 VST.floyd.nested_field_lemmas <> ::gfield_scope:'DOT'_x not
+R1218:1222 x448 <> _limb def
+R1226:1228 Coq.Lists.List <> map def
+R1236:1238 Coq.Lists.List <> map def
+R1249:1258 Verif_gf_cpy <> contents_y:13 var
+R1240:1247 compcert.lib.Integers Int repr def
+R1230:1233 compcert.common.Values <> Vint constr
+R1262:1262 Verif_gf_cpy <> x:8 var
+R1281:1288 VST.floyd.field_at <> field_at def
+R1290:1292 Verif_gf_cpy <> shy:12 var
+R1294:1297 Verif_gf_cpy <> t_gf def
+R1300:1303 VST.floyd.nested_field_lemmas <> ::gfield_scope:'DOT'_x not
+R1304:1308 x448 <> _limb def
+R1312:1314 Coq.Lists.List <> map def
+R1322:1324 Coq.Lists.List <> map def
+R1335:1344 Verif_gf_cpy <> contents_y:13 var
+R1326:1333 compcert.lib.Integers Int repr def
+R1316:1319 compcert.common.Values <> Vint constr
+R1348:1348 Verif_gf_cpy <> y:11 var
+def 1365:1374 <> gf_cpy_Inv
+binder 1376:1378 <> shx:15
+binder 1380:1382 <> shy:16
+binder 1384:1384 <> x:17
+binder 1386:1386 <> y:18
+binder 1388:1397 <> contents_x:19
+binder 1399:1408 <> contents_y:20
+R1419:1421 VST.floyd.canon <> ::assert:'EX'_x_'..'_x_','_x not
+R1427:1437 VST.floyd.canon <> ::assert:'EX'_x_'..'_x_','_x not
+R1927:1927 VST.floyd.canon <> ::assert:'EX'_x_'..'_x_','_x not
+R1426:1426 Coq.Numbers.BinNums <> Z ind
+binder 1422:1422 <> i:21
+R1438:1445 VST.floyd.canon <> ::assert:'PROP'_'('_x_';'_'..'_';'_x_')'_x not
+R1464:1481 VST.floyd.canon <> ::assert:'PROP'_'('_x_';'_'..'_';'_x_')'_x not
+R1500:1517 VST.floyd.canon <> ::assert:'PROP'_'('_x_';'_'..'_';'_x_')'_x not
+R1541:1558 VST.floyd.canon <> ::assert:'PROP'_'('_x_';'_'..'_';'_x_')'_x not
+R1582:1599 VST.floyd.canon <> ::assert:'PROP'_'('_x_';'_'..'_';'_x_')'_x not
+R1606:1615 VST.floyd.canon <> ::assert:'PROP'_'('_x_';'_'..'_';'_x_')'_x not
+R1446:1459 VST.veric.shares <> writable_share def
+R1461:1463 Verif_gf_cpy <> shx:15 var
+R1482:1495 VST.veric.shares <> readable_share def
+R1497:1499 Verif_gf_cpy <> shy:16 var
+R1536:1538 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R1518:1524 Coq.ZArith.Zcomplements <> Zlength def
+R1526:1535 Verif_gf_cpy <> contents_x:19 var
+R1577:1579 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R1559:1565 Coq.ZArith.Zcomplements <> Zlength def
+R1567:1576 Verif_gf_cpy <> contents_y:20 var
+R1601:1604 Coq.ZArith.BinInt <> ::Z_scope:x_'>='_x not
+R1600:1600 Verif_gf_cpy <> i:21 var
+R1616:1624 VST.floyd.canon <> ::assert3:'LOCAL'_'('_x_';'_'..'_';'_x_')'_x not
+R1634:1635 VST.floyd.canon <> ::assert3:'LOCAL'_'('_x_';'_'..'_';'_x_')'_x not
+R1645:1654 VST.floyd.canon <> ::assert3:'LOCAL'_'('_x_';'_'..'_';'_x_')'_x not
+R1625:1628 VST.floyd.canon <> temp constr
+R1630:1631 x448 <> _x def
+R1633:1633 Verif_gf_cpy <> x:17 var
+R1636:1639 VST.floyd.canon <> temp constr
+R1641:1642 x448 <> _y def
+R1644:1644 Verif_gf_cpy <> y:18 var
+R1655:1663 VST.floyd.canon <> ::assert5:'SEP'_'('_x_';'_'..'_';'_x_')' not
+R1840:1857 VST.floyd.canon <> ::assert5:'SEP'_'('_x_';'_'..'_';'_x_')' not
+R1926:1926 VST.floyd.canon <> ::assert5:'SEP'_'('_x_';'_'..'_';'_x_')' not
+R1664:1671 VST.floyd.field_at <> field_at def
+R1673:1675 Verif_gf_cpy <> shx:15 var
+R1677:1680 Verif_gf_cpy <> t_gf def
+R1683:1686 VST.floyd.nested_field_lemmas <> ::gfield_scope:'DOT'_x not
+R1687:1691 x448 <> _limb def
+R1716:1716 Coq.Init.Datatypes <> ::list_scope:x_'++'_x not
+R1776:1802 Coq.Init.Datatypes <> ::list_scope:x_'++'_x not
+R1836:1836 Coq.Init.Datatypes <> ::list_scope:x_'++'_x not
+R1717:1725 stdpp.list <> take syndef
+R1741:1743 Coq.Lists.List <> map def
+R1751:1753 Coq.Lists.List <> map def
+R1764:1773 Verif_gf_cpy <> contents_y:20 var
+R1755:1762 compcert.lib.Integers Int repr def
+R1745:1748 compcert.common.Values <> Vint constr
+R1728:1735 Coq.ZArith.BinInt Z to_nat def
+R1737:1737 Verif_gf_cpy <> i:21 var
+R1803:1811 stdpp.list <> drop syndef
+R1826:1835 Verif_gf_cpy <> contents_x:19 var
+R1814:1821 Coq.ZArith.BinInt Z to_nat def
+R1823:1823 Verif_gf_cpy <> i:21 var
+R1839:1839 Verif_gf_cpy <> x:17 var
+R1858:1865 VST.floyd.field_at <> field_at def
+R1867:1869 Verif_gf_cpy <> shy:16 var
+R1871:1874 Verif_gf_cpy <> t_gf def
+R1877:1880 VST.floyd.nested_field_lemmas <> ::gfield_scope:'DOT'_x not
+R1881:1885 x448 <> _limb def
+R1889:1891 Coq.Lists.List <> map def
+R1899:1901 Coq.Lists.List <> map def
+R1912:1921 Verif_gf_cpy <> contents_y:20 var
+R1903:1910 compcert.lib.Integers Int repr def
+R1893:1896 compcert.common.Values <> Vint constr
+R1925:1925 Verif_gf_cpy <> y:18 var
+def 1951:1955 <> Gprog
+R1959:1966 VST.veric.mpred <> funspecs def
+R1995:1996 Coq.Lists.List ListNotations ::list_scope:'['_x_']' not
+R2008:2009 Coq.Lists.List ListNotations ::list_scope:'['_x_']' not
+R1997:2007 Verif_gf_cpy <> gf_cpy_spec def
+R1990:1993 x448 <> prog def
+R1995:1996 Coq.Lists.List ListNotations ::list_scope:'['_x_']' not
+R2008:2009 Coq.Lists.List ListNotations ::list_scope:'['_x_']' not
+R1997:2007 Verif_gf_cpy <> gf_cpy_spec def
+prf 2021:2031 <> body_gf_cpy
+R2035:2044 VST.floyd.SeparationLogicAsLogicSoundness MainTheorem.CSHL_PracticalLogic.CSHL_MinimumLogic.CSHL_Defs semax_body def
+R2067:2077 Verif_gf_cpy <> gf_cpy_spec def
+R2058:2065 x448 <> f_gf_cpy def
+R2052:2056 Verif_gf_cpy <> Gprog def
+R2046:2050 Verif_gf_cpy <> Vprog def
+R2153:2162 Verif_gf_cpy <> gf_cpy_Inv def
+R2153:2162 Verif_gf_cpy <> gf_cpy_Inv def
+R2279:2286 Coq.ZArith.BinInt Z to_nat def
+R2290:2292 Coq.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R2303:2303 Coq.Init.Datatypes <> S constr
+R2306:2313 Coq.ZArith.BinInt Z to_nat def
+R2279:2286 Coq.ZArith.BinInt Z to_nat def
+R2290:2292 Coq.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R2303:2303 Coq.Init.Datatypes <> S constr
+R2306:2313 Coq.ZArith.BinInt Z to_nat def
