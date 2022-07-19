@@ -3,6 +3,8 @@ Require Import x448.
 Require Import stdpp.list.
 Require Import ZArith.
 Require Import compcert.lib.Coqlib.
+Require Import list_int_functions.
+Require Import Verif_gf_cpy.
 
 Instance CompSpecs : compspecs. Proof. make_compspecs prog. Defined.
 Definition Vprog : varspecs.  mk_varspecs prog. Defined.
@@ -39,7 +41,9 @@ Definition gf_mul_spec : ident * funspec :=
 
 Definition Gprog : funspecs := ltac:(with_library prog [ gf_mul_spec; gf_cpy_spec ]).
 
-Lemma body_gf_cpy : semax_body Vprog Gprog2 f_gf_mul gf_mul_spec.
+Lemma body_gf_cpy : semax_body Vprog Gprog f_gf_mul gf_mul_spec.
 Proof.
     start_function.
+    Search "field_address".
+    forward_call (v_aa, Tsh, (field_address t_gf (DOT _limb) v_aa)).
 Admitted.
