@@ -85,34 +85,51 @@ Proof.
 Lemma L1 (i : Z) (l1 l2 : list val) : 
 0 <= i < Zlength l1 ->
 sublist.sublist 0 i (sublist.sublist 0 i l1 ++ l2) = sublist.sublist 0 i l1.
-Proof. Admitted.
+Proof. 
+    intros;
+    list_solve.
+    Qed.
 
 Lemma L1' (i : Z) (l1 l2 : list val) : 
 0 <= i < Zlength l1 ->
 Zlength l1 = Zlength l2 ->
 sublist.sublist (i + 1) (Zlength l2) (sublist.sublist 0 i l1 ++
     sublist.sublist i (Zlength l2) l2) = sublist.sublist (i + 1) (Zlength l2) l2.
-Proof. Admitted.
+Proof.
+    intros;
+    list_solve.
+    Qed.  
 
 Lemma L2 (i : Z) (l : list Z) : 
 0 <= i < Zlength l ->
 (sublist.sublist 0 i (map Vint (map Int.repr l))) ++
 [Vint (Int.repr (Znth i l))] = sublist.sublist 0 (i+1) (map Vint (map Int.repr l)).
-Proof. Admitted.
+Proof. 
+    intros;
+    list_solve.
+    Qed.
 
 Lemma L3 (i : Z) (l1 l2 : list val) :
 0 <= i < Zlength l1 ->
 Zlength l1 = Zlength l2 ->
 Zlength (sublist.sublist 0 i l1 ++ sublist.sublist i (Zlength l2) l2) = Zlength l2.
-Proof. Admitted.
+Proof. 
+    intros.
+    rewrite Zlength_app.
+    list_simplify.
+    Qed.
 
 Lemma body_gf_cpy : semax_body Vprog Gprog f_gf_cpy gf_cpy_spec.
 Proof.
     start_function.
     forward.
     forward_for_simple_bound 16 (gf_cpy_Inv shx shy x y contents_x contents_y).
-    - entailer!.
-        admit.
+    -   entailer!.
+    assert (sublist.sublist 0 0 (map Vint (map Int.repr contents_y)) = [])by list_solve.
+    rewrite H5; simpl.      
+    assert ((sublist.sublist 0 (Zlength contents_x) contents_x) = contents_x) by list_solve.
+    rewrite H6.    
+    cancel.
     - try repeat forward.
         entailer!.
         rewrite upd_Znth_unfold.
@@ -122,10 +139,6 @@ Proof.
         rewrite L3.
         rewrite L1'.
         cancel.
-
-
-
-
         try repeat rewrite Zlength_map.
         by rewrite H0.
         try repeat rewrite Zlength_map.
@@ -152,16 +165,7 @@ Proof.
         rewrite H8.
         rewrite app_nil_r.
         cancel.
-        Search (Zlength )
-        list_simplify.
-        Compute sublist.sublist 0 2 [1;2;3;4;5] ++ [8;9].
-        About upd_Znth_unfold.
-        entailer!.
-        Check list.take_ge.
-        Search "take" inside stdpp.list.
-        replace (Z.to_nat (i + 1)) with (S (Z.to_nat i)).
-Admitted.
-(* Qed. *)
+        Qed.
 
 
 
