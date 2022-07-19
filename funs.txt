@@ -1,0 +1,52 @@
+List of functions:
+
+/** Copy x = y */
+static void gf_cpy(gf x, const gf y) 
+
+/** Mostly-unoptimized multiply (PERF), but at least it's unrolled. */
+static void
+gf_mul (gf c, const gf a, const gf b) 
+
+/** No dedicated square (PERF) */
+#define gf_sqr(c,a) gf_mul(c,a,a)
+
+/** Inverse square root using addition chain. */
+static void gf_isqrt(gf y, const gf x) 
+
+static void gf_inv(gf y, const gf x) 
+
+/** Weak reduce mod p. */
+static void gf_reduce(gf x) 
+
+/** Add mod p.  Conservatively always weak-reduce. (PERF) */
+static void gf_add ( gf x, const gf y, const gf z ) 
+
+/** Subtract mod p.  Conservatively always weak-reduce. (PERF) */
+static void gf_sub ( gf x, const gf y, const gf z ) 
+
+/** Constant time, if (swap) (x,y) = (y,x); */
+static void cond_swap(gf x, gf_s *__restrict__ y, decaf_word_t swap) 
+
+/**
+ * Mul by signed int.  Not constant-time WRT the sign of that int.
+ * Just uses a full mul (PERF)
+ */
+static inline void gf_mlw(gf a, const gf b, int w) 
+
+/** Canonicalize */
+static void gf_canon ( gf a ) 
+
+/* Deserialize */
+static decaf_word_t gf_deser(gf s, const unsigned char ser[X448_BYTES]) 
+
+/* Serialize */
+static void gf_ser(uint8_t ser[X448_BYTES], gf a) 
+
+int __attribute__((visibility("default"))) 
+    x448 (  unsigned char out[X448_BYTES],
+            const unsigned char scalar[X448_BYTES],
+            const unsigned char base[X448_BYTES])
+
+int __attribute__((visibility("default")))
+x448_base ( unsigned char out[X448_BYTES],
+            const unsigned char scalar[X448_BYTES]) 

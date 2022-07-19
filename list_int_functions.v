@@ -6,7 +6,7 @@ Require Import stdpp.list.
 
 Local Open Scope Z. 
  Definition int_to_list (N : Z) : list Z := 
-    [    N mod 2^32;
+    [    N mod 2^32;             
         (N/(2^32)) mod 2^32;
         (N/(2^(32*2))) mod 2^32;
         (N/(2^(32*3))) mod 2^32;
@@ -32,4 +32,5 @@ Fixpoint list_to_int' (l  : list Z) (n : Z) : Z :=
     | h :: t => (h * (Z.pow 2 (32 * (n)))) + (list_to_int' t (n+1))
     end. 
 
+(* Function to write an integer from a list representation. *)
 Definition list_to_int (l : list Z) := list_to_int' l 0.
